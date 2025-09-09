@@ -46,8 +46,8 @@ Problem: Create a class FibonacciGenerator that yields Fibonacci numbers up to a
         2. While a is less than or equal to the limit:
             a. yield a → this returns the current value of a and pauses the function until the next value is requested.
             b. Then, update a and b to the next two numbers in the Fibonacci sequence
-        3. Using the Class and Generator
-        4. Iterating Over the Generator
+    3. Using the Class and Generator
+    4. Iterating Over the Generator
 
  4. map(), OOPs with SQLite
 Problem: Write a program that stores a list of product names in an SQLite database. Use map() to apply a function that formats each product name to be capitalized before inserting it into the database.
