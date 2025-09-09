@@ -1,6 +1,8 @@
 import requests
 from bs4 import BeautifulSoup
 
+url = 'https://www.python.org'
+
 def extract_links(url):
     response = requests.get(url)
     soup = BeautifulSoup(response.text, 'html.parser')
@@ -9,6 +11,5 @@ def extract_links(url):
         if href:
             yield href  
             
-url = 'https://www.python.org'
 for link in extract_links(url):
     print(link)
