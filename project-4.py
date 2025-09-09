@@ -3,6 +3,7 @@ import sqlite3
 product_name = ['laptop', 'smartphone', 'headphone', 'keyboard', 'mouse']
 
 formatted_products = list(map(str.capitalize, product_name))
+
 conn = sqlite3.connect('products1.db')
 cursor = conn.cursor()
 
