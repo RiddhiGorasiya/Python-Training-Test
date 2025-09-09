@@ -12,3 +12,14 @@ employee = [
     Employee("Putha", 70000)
 ]
 
+employee = list(map(lambda e: Employee(e.name, e.salary * 1.10), employee))
+
+high_salary = list(filter(lambda e: e.salary > 50000, employee))
+
+print("All employees after raise:")
+for e in employee:
+    print(e)
+
+print("\nEmployees with salary greater than 50000:")
+for e in high_salary:
+    print(e)
