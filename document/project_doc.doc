@@ -1,0 +1,66 @@
+1. OOP with map() and filter()
+Problem: Create a class Employee with attributes name and salary. Then, use the map() function to apply a 10% raise to all employees' salaries. Use the filter() function to get the employees who have a salary greater than 50000.
+
+    1. Define the Employee class
+    2. Create a list of employee objects
+    3. Apply a 10% salary raise using map
+        1. map(...) applies the lambda function to each employee in the list.
+        2. The lambda function returns a new Employee object with the same name, but salary increased by 10% (e.salary * 1.10).
+        3. The result is converted back to a list and assigned to employee.
+            Result after raise:
+            Riddhi: 44000
+            Dishu: 55000
+            Heni: 66000
+            Putha: 77000
+    4. Filter employees with salary > 50000
+        1. filter(...) applies the lambda function to each employee.
+        2. It keeps only those employees whose salary is greater than 50000 after the raise.
+        3. The filtered list is stored in high_salary.
+            Which employees qualify?
+            Dishu (55000)
+            Heni (66000)
+            Putha (77000)
+    5. Print all employees after the raise
+    6. Print employees with salary > 50000
+
+2. Generator with BeautifulSoup
+Problem: Write a generator extract_links that extracts all links (<a> tags) from a webpage. Use BeautifulSoup to parse the page and the generator to yield all the href attributes.
+url = 'https://www.python.org'
+
+    1. Import Required Libraries
+    2. Define the URL
+    3. Define a Function to Extract Links
+        1. requests.get(url) fetches the page content.
+        2. BeautifulSoup(..., 'html.parser') parses the HTML so we can navigate it easily.
+        3. soup.find_all('a') returns all anchor (<a>) tags.
+        4. a_tag.get('href') fetches the link from the href attribute of each anchor.
+        5. yield href makes the function a generator — it returns one link at a time without storing all in memory.
+    4. Call the Function and Print the Links
+
+3. OOP with Generators
+Problem: Create a class FibonacciGenerator that yields Fibonacci numbers up to a given limit. Use a generator to yield Fibonacci numbers.
+
+    1. Class Definition
+    2. Generator Method
+        1. Starts with a = 0, b = 1 (first two Fibonacci numbers).
+        2. While a is less than or equal to the limit:
+            a. yield a → this returns the current value of a and pauses the function until the next value is requested.
+            b. Then, update a and b to the next two numbers in the Fibonacci sequence
+        3. Using the Class and Generator
+        4. Iterating Over the Generator
+
+ 4. map(), OOPs with SQLite
+Problem: Write a program that stores a list of product names in an SQLite database. Use map() to apply a function that formats each product name to be capitalized before inserting it into the database.
+
+    1. Import SQLite Library
+    2. Define Product Names
+    3. Format Product Names
+        1. his uses map() with str.capitalize to capitalize the first letter of each product.
+        The result:
+        ['Laptop', 'Smartphone', 'Headphone', 'Keyboard', 'Mouse']
+    4. Connect to SQLite Database
+    5. Create a Table (If It Doesn't Exist)
+    6. Insert Data Into the Table
+    7. Save the Changes(commit)
+    8. Retrieve and Print Data
+    9. Close the Connection
